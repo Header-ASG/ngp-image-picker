@@ -1,0 +1,34 @@
+{
+  "name": "ngp-image-picker",
+  "version": "3.0.0",
+  "description": "Angular library for the selection, edition and compression of images in png, jpeg and webp formats.",
+  "peerDependencies": {
+    "@angular/common": "^17.0.0",
+    "@angular/core": "^17.0.0"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "tslib": "^2.5.0"
+  },
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "image picker",
+    "image upload",
+    "image editor",
+    "image filters",
+    "image compression",
+    "image",
+    "compress image",
+    "cropping images"
+  ],
+  "author": {
+    "name": "Header ASG",
+    "url": "https://github.com/Header-ASG"
+  },
+  "repository": "https://github.com/Header-ASG/ngp-image-picker",
+  "bugs": {
+    "url": "https://github.com/Header-ASG/ngp-image-picker/issues"
+  },
+  "homepage": "https://github.com/Header-ASG/ngp-image-picker#readme"
+}

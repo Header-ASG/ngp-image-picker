@@ -1,0 +1,91 @@
+<div *ngIf="!loadImage" class="place-image">
+  <div
+    class="image-holder"
+    [ngStyle]="{
+      width: this.config.width,
+      height: this.config.height,
+      borderRadius: this.config.borderRadius,
+      aspectRatio: this.config.aspectRatio
+    }"
+  >
+    <button title="{{ labels['Upload a image'] }}" class="icon-btn image-upload-btn" (click)="onUpload($event)">
+      <!--  <span class="material-icons">add_a_photo</mat-icon> -->
+      <span class="material-icons">add_a_photo</span>
+    </button>
+
+    <input #imagePicker type="file" style="display: none" [id]="'filePicker-' + this.uuidFilePicker" (change)="handleFileSelect($event)" />
+  </div>
+</div>
+<div *ngIf="loadImage" class="place-image">
+  <div
+    class="image-holder-loaded"
+    [ngStyle]="{
+      width: this.config.width,
+      height: this.config.height,
+      borderRadius: this.config.borderRadius,
+      aspectRatio: this.config.aspectRatio
+    }"
+  >
+    <img
+      [src]="this.imageSrc"
+      alt="image-loaded"
+      [ngStyle]="{ borderRadius: this.config.borderRadius, objectFit: this.config.objectFit }"
+    />
+    <input #imagePicker type="file" style="display: none" [id]="'filePicker-' + this.uuidFilePicker" (change)="handleFileSelect($event)" />
+  </div>
+  <p
+    *ngIf="this.calculateSize()"
+    class="caption image-caption"
+    [ngStyle]="{
+      color: this.calculateSize() > 120 ? '#f44336' : 'unset',
+      fontWeight: this.calculateSize() > 120 ? '500' : 'unset'
+    }"
+  >
+    size: {{ this.calculateSize() }}Kb &nbsp; {{ this.state.format }}
+  </p>
+
+  <div
+    style="flex-direction: row; box-sizing: border-box; display: flex; place-content: flex-start; align-items: flex-start"
+    class="editing-bar-btn"
+  >
+    <button
+      class="icon-btn"
+      id="upload-img"
+      *ngIf="!this.config.hideAddBtn"
+      title="{{ labels['Upload a image'] }}"
+      (click)="onUpload($event)"
+    >
+      <span class="material-icons">add_a_photo</span>
+    </button>
+    <button
+      class="icon-btn"
+      id="edit-img"
+      *ngIf="!this.config.hideEditBtn"
+      title="{{ labels['Open the editor panel'] }}"
+      (click)="onOpenEditPanel()"
+    >
+      <span class="material-icons">edit</span>
+    </button>
+    <a
+      id="download-img"
+      *ngIf="!this.config.hideDownloadBtn"
+      title="{{ labels['Download the image'] }}"
+      [href]="this.imageSrc"
+      download="{{ imageName }}"
+    >
+      <span class="material-icons">cloud_download</span>
+    </a>
+    <button class="icon-btn" id="delete-img" *ngIf="!this.config.hideDeleteBtn" title="{{ labels['Remove'] }}" (click)="onRemove()">
+      <span class="material-icons">delete</span>
+    </button>
+  </div>
+</div>
+
+<lib-edit-image
+  *ngIf="showEditPanel"
+  [imageSrc]="this.imageSrc"
+  [initialState]="this.state"
+  [labels]="this.labels"
+  [color]="this.color"
+  (closeModal)="this.onCloseEditPanel($event)"
+></lib-edit-image>
