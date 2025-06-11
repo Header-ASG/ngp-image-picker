@@ -1,6 +1,6 @@
 {
-  "name": "ngp-image-picker",
-  "version": "3.0.0",
+  "name": "@headerasg/ngp-image-picker",
+  "version": "2.6.1",
   "description": "Angular library for the selection, edition and compression of images in png, jpeg and webp formats.",
   "peerDependencies": {
     "@angular/common": "^17.0.0",
