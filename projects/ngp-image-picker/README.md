@@ -17,6 +17,7 @@ The following list describes the compatibility with Angular:
 | NgpImagePicker   | Angular | 
 | ---------------- | ------- | 
 | `2.6.x`          | `17.x`  | 
+| `2.7.x`          | `18.x`  | 
 
 For older versions visit:
 https://www.npmjs.com/package/ngp-image-picker
