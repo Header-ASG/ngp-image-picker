@@ -1,6 +1,6 @@
 {
   "name": "@headerasg/ngp-image-picker",
-  "version": "2.8.1",
+  "version": "2.8.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
