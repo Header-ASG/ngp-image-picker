@@ -7,5 +7,9 @@
 <hr />
 <br />
 <p>setImageSrc:</p>
-<img *ngIf="imageSrc" [src]="imageSrc" alt="example" style="max-height: 500px; max-width: 100%; object-fit: contain; background: black" />
-<h2 *ngIf="!imageSrc" style="text-align: center">No image loaded yet</h2>
+@if (imageSrc) {
+  <img [src]="imageSrc" alt="example" style="max-height: 500px; max-width: 100%; object-fit: contain; background: black" />
+}
+@if (!imageSrc) {
+  <h2 style="text-align: center">No image loaded yet</h2>
+}

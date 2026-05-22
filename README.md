@@ -19,6 +19,7 @@ The following list describes the compatibility with Angular:
 | `2.6.x`          | `17.x`  | 
 | `2.7.x`          | `18.x`  | 
 | `2.8.x`          | `19.x`  | 
+| `2.9.x`          | `20.x`  | 
 
 For older versions visit:
 https://www.npmjs.com/package/ngp-image-picker
