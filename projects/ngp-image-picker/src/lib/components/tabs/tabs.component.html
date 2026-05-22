@@ -1,13 +1,16 @@
 <div class="header">
-  <div
-    (click)="onActivateTab(index)"
-    *ngFor="let tab of this.labels; let index = index"
-    class="itemlabel bottomLine"
-    [ngStyle]="{ color: tab.active ? color : 'inherit', opacity: tab.active ? 1 : 0.7, fontWeight: tab.active ? 500 : 'inherit' }"
-  >
-    {{ tab.label }}
-    <div *ngIf="tab.active" [style.backgroundColor]="this.color"></div>
-  </div>
+  @for (tab of this.labels; track tab; let index = $index) {
+    <div
+      (click)="onActivateTab(index)"
+      class="itemlabel bottomLine"
+      [ngStyle]="{ color: tab.active ? color : 'inherit', opacity: tab.active ? 1 : 0.7, fontWeight: tab.active ? 500 : 'inherit' }"
+      >
+      {{ tab.label }}
+      @if (tab.active) {
+        <div [style.backgroundColor]="this.color"></div>
+      }
+    </div>
+  }
 </div>
 
 <div class="body">
