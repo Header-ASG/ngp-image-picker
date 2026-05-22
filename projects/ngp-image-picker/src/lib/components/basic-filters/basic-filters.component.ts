@@ -2,9 +2,10 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { IBasicFilterState } from '../../models/index.models';
 
 @Component({
-  selector: 'lib-basic-filters',
-  templateUrl: './basic-filters.component.html',
-  styleUrls: ['./basic-filters.component.scss'],
+    selector: 'lib-basic-filters',
+    templateUrl: './basic-filters.component.html',
+    styleUrls: ['./basic-filters.component.scss'],
+    standalone: false
 })
 export class BasicFiltersComponent implements OnInit {
   @Input() color: string = '';
@@ -37,7 +38,8 @@ export class BasicFiltersComponent implements OnInit {
       };
     }
   }
-  timeout: number | NodeJS.Timeout | undefined;
+  //timeout: number | NodeJS.Timeout | undefined;
+  timeout: ReturnType<typeof setTimeout> | undefined;
 
   constructor() {}
 

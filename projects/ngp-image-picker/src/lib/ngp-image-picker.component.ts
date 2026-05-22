@@ -18,11 +18,12 @@ import labelFr from './i18n/fr.json';
 import labelDe from './i18n/de.json';
 
 @Component({
-  selector: 'ngp-image-picker',
-  templateUrl: './ngp-image-picker.component.html',
-  styleUrls: ['./ngp-image-picker.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'ngp-image-picker',
+    templateUrl: './ngp-image-picker.component.html',
+    styleUrls: ['./ngp-image-picker.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class NgpImagePickerComponent implements OnInit {
   config: ImagePickerConf = {
