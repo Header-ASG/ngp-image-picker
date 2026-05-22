@@ -2,9 +2,10 @@ import { Component, Input, OnInit, AfterViewInit, Output, EventEmitter, OnDestro
 import Croppr from '../../functions/croppr/index';
 
 @Component({
-  selector: 'lib-cropper-wrapper',
-  templateUrl: './cropper-wrapper.component.html',
-  styleUrls: ['./cropper-wrapper.component.scss'],
+    selector: 'lib-cropper-wrapper',
+    templateUrl: './cropper-wrapper.component.html',
+    styleUrls: ['./cropper-wrapper.component.scss'],
+    standalone: false
 })
 export class CropperWrapperComponent implements OnInit, AfterViewInit, OnDestroy {
   imageSrc: string = '';

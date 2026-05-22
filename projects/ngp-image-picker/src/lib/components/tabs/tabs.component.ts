@@ -5,9 +5,10 @@ interface TabHeader {
   label: string;
 }
 @Component({
-  selector: 'lib-tabs',
-  templateUrl: './tabs.component.html',
-  styleUrls: ['./tabs.component.scss'],
+    selector: 'lib-tabs',
+    templateUrl: './tabs.component.html',
+    styleUrls: ['./tabs.component.scss'],
+    standalone: false
 })
 export class TabsComponent implements OnInit {
   labels: Array<TabHeader> = [];

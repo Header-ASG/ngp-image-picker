@@ -4,9 +4,10 @@ import { IBasicFilterState, IState } from '../../models/index.models';
 
 // const Croppr = require('../../services/croppr-service')
 @Component({
-  selector: 'lib-edit-image',
-  templateUrl: './edit-image.component.html',
-  styleUrls: ['./edit-image.component.scss'],
+    selector: 'lib-edit-image',
+    templateUrl: './edit-image.component.html',
+    styleUrls: ['./edit-image.component.scss'],
+    standalone: false
 })
 export class EditImageComponent implements OnInit {
   @Input() labels: any;
