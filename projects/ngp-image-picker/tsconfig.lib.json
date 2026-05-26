@@ -6,8 +6,9 @@
     "declarationMap": true,
     "declaration": true,
     "inlineSources": true,
-    "types": ["node"],
-    "lib": ["dom", "es2018"],
+    "types": [
+      "node"
+    ],
     "resolveJsonModule": true
   },
   "angularCompilerOptions": {
