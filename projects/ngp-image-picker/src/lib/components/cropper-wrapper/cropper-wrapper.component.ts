@@ -12,12 +12,12 @@ export class CropperWrapperComponent implements OnInit, AfterViewInit, OnDestroy
   croppr: Croppr | undefined | null = null;
   croppSize: { width: number; height: number } = { width: 150, height: 150 };
 
-  @HostListener('document:keydown.Control', ['$event'])
+  @HostListener('document:keydown.Control')
   onKeyDown() {
     if (!this.croppr) return;
     this.croppr.options.aspectRatio = 1.0;
   }
-  @HostListener('document:keyup.Control', ['$event'])
+  @HostListener('document:keyup.Control')
   onKeyUp() {
     if (!this.croppr) return;
     this.croppr.options.aspectRatio = null;
